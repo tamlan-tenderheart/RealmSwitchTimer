@@ -25,6 +25,7 @@ namespace RealmSwitchTimer
 {
     public partial class MainForm : Form
     {
+        private double realmTimerDuration = 4;
         private const int UPDATE_INTERVAL = 15; 
         private int updateCounter = UPDATE_INTERVAL;
 
@@ -60,7 +61,7 @@ namespace RealmSwitchTimer
                      */
                     CharacterName.Text = lastCharacterFile.Name.Split('-')[0];
                     CharacterTime.Text = lastCharacterFile.LastWriteTime.ToString();
-                    DateTime expiryTime = lastCharacterFile.LastWriteTime.AddHours(12L);
+                    DateTime expiryTime = lastCharacterFile.LastWriteTime.AddHours(realmTimerDuration);
                     if (now > expiryTime)
                     {
                         Expiry.Text = "Now";
@@ -73,7 +74,7 @@ namespace RealmSwitchTimer
                     else
                     {
                         Expiry.Text = (expiryTime - now).ToString("h' h 'm' m'");
-                        Progress.Value = (int)(100 * (1 - (expiryTime - now).TotalHours / 12));
+                        Progress.Value = (int)(100 * (1 - (expiryTime - now).TotalHours / realmTimerDuration));
                     }
                 }
                 else
