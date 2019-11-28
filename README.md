@@ -3,9 +3,9 @@ C# Project to estimate the amount of time on the realm switch timer for the Phoe
 
 If you want to simply use the tool, download the following three files and place them in your DAoC installation directory:
 
-RealmSwitchTimer/bin/release/RealmSwitchTimer.exe
-RealmSwitchTimer/bin/release/RealmSwitchTimer.exe.config
-RealmSwitchTimer/bin/release/RealmSwitchTimer.pdb
+* RealmSwitchTimer/bin/release/RealmSwitchTimer.exe
+* RealmSwitchTimer/bin/release/RealmSwitchTimer.exe.config
+* RealmSwitchTimer/bin/release/RealmSwitchTimer.pdb
 
 Then double-click on the RealmSwitchTimer.exe are you are all set to go!
 
