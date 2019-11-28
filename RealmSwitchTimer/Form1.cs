@@ -105,6 +105,13 @@ namespace RealmSwitchTimer
                     "Electronic Arts",
                     "Dark Age of Camelot",
                     "phoenix"));
+            if(!DirInfo.Exists)
+                DirInfo = new DirectoryInfo(
+                    Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                        "Electronic Arts",
+                        "Dark Age of Camelot",
+                        "LoTM"));
             return DirInfo.Exists 
                 ? DirInfo.GetFileSystemInfos("*.ini").OrderByDescending(fi => fi.LastWriteTime).First()
                 : null;
